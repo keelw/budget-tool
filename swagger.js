@@ -5,7 +5,7 @@ const doc = {
         title: 'Budget API',
         description: 'Budgeting API with User Management'
     },
-    host: 'localhost:3000',
+    host: 'cse341-budget.onrender.com',
     schemes: ['https']
 };
 
