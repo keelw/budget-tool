@@ -1,0 +1,375 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Budget API",
+      "description": "Budgeting API with user management and authentication",
+      "version": "1.0.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/": {
+        "get": {
+          "tags": [
+            "Hello World"
+          ],
+          "description": "",
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/budget/": {
+        "get": {
+          "tags": [
+            "Budget"
+          ],
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Budget"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "budgetName": {
+                    "example": "Sewage Bill"
+                  },
+                  "userId": {
+                    "example": "any"
+                  },
+                  "category": {
+                    "example": "Utilities"
+                  },
+                  "amount": {
+                    "example": "30.00"
+                  },
+                  "frequency": {
+                    "example": "Monthly"
+                  },
+                  "startDate": {
+                    "example": "03/13/2024"
+                  },
+                  "endDate": {
+                    "example": "03/13/2034",
+                    "infinite": "00/00/0000"
+                  },
+                  "status": {
+                    "example": "Active"
+                  },
+                  "creationDate": {
+                    "example": "02/14/2024"
+                  },
+                  "lastUpdated": {
+                    "example": "02/14/2024"
+                  },
+                  "notes": {
+                    "example": "Sewage bill paid to Tooele City monthly"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/budget/{id}": {
+        "get": {
+          "tags": [
+            "Budget"
+          ],
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Budget"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                    "budgetName": {
+                        "example": "Sewage Bill"
+                      },
+                      "userId": {
+                        "example": "any"
+                      },
+                      "category": {
+                        "example": "Utilities"
+                      },
+                      "amount": {
+                        "example": "30.00"
+                      },
+                      "frequency": {
+                        "example": "Monthly"
+                      },
+                      "startDate": {
+                        "example": "03/13/2024"
+                      },
+                      "endDate": {
+                        "example": "03/13/2034",
+                        "infinite": "00/00/0000"
+                      },
+                      "status": {
+                        "example": "Active"
+                      },
+                      "creationDate": {
+                        "example": "02/14/2024"
+                      },
+                      "lastUpdated": {
+                        "example": "02/14/2024"
+                      },
+                      "notes": {
+                        "example": "Sewage bill paid to Tooele City monthly"
+                      }
+                    }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Budget"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/users/": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Users"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "example": "chuckyB"
+                  },
+                  "email": {
+                    "example": "chuck.bartowski@spy.com"
+                  },
+                  "firstName": {
+                    "example": "Charles"
+                  },
+                  "lastName": {
+                    "example": "Bartowski"
+                  },
+                  "creationDate": {
+                    "example": "05/11/2019"
+                  },
+                  "lastLogin": {
+                    "example": "03/13/2024"
+                  },
+                  "oAuthId": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/users/{id}": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Users"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "example": "chuckyB"
+                      },
+                      "email": {
+                        "example": "chuck.bartowski@spy.com"
+                      },
+                      "firstName": {
+                        "example": "Charles"
+                      },
+                      "lastName": {
+                        "example": "Bartowski"
+                      },
+                      "creationDate": {
+                        "example": "05/11/2019"
+                      },
+                      "lastLogin": {
+                        "example": "03/13/2024"
+                      },
+                      "oAuthId": {
+                        "example": "any"
+                      }
+                  }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Users"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+    }
+  }
+}
+  
