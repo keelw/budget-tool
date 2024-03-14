@@ -30,7 +30,7 @@ const create = async(req, res) => {
         oAuthId: req.body.oAuthId,
     };
 
-    const response = await mongodb.getDatabase().db().collection('users').insertOne(user);
+    const response = await mongodb.getDatabase().db().collection('cse341-users').insertOne(user);
     if (response.acknowledged) {
         res.status(204).send();
     } else {
