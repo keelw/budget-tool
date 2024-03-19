@@ -36,6 +36,12 @@
           "responses": {
             "200": {
               "description": "OK"
+            },
+            "400": {
+              "description": "Resource not found."
+            },
+            "500": {
+              "description": "Internal Server Error"
             }
           }
         },
@@ -119,6 +125,12 @@
           "responses": {
             "200": {
               "description": "OK"
+            },
+            "400": {
+              "description": "Resource not found."
+            },
+            "500": {
+              "description": "Internal Server Error"
             }
           }
         },
@@ -222,6 +234,12 @@
           "responses": {
             "200": {
               "description": "OK"
+            },
+            "400": {
+              "description": "Resource not found."
+            },
+            "500": {
+              "description": "Internal Server Error"
             }
           }
         },
@@ -292,6 +310,12 @@
           "responses": {
             "200": {
               "description": "OK"
+            },
+            "400": {
+              "description": "Resource not found."
+            },
+            "500": {
+              "description": "Internal Server Error"
             }
           }
         },
